@@ -8,4 +8,4 @@ const DB_USER = 'root';
 
 const DB_PASS = 'secret';
 
-$pdo = new PDO('mysql:host=' . DB_HOST . '';dbname='' . DB_NAME . '';charset=utf8', DB_USER, DB_PASS);
+// $pdo = new PDO('mysql:host=' . DB_HOST . '';dbname='' . DB_NAME . '';charset=utf8', DB_USER, DB_PASS);

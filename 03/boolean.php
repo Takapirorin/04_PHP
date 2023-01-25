@@ -12,3 +12,19 @@
 // var_dump((bool) undefined);e
 // var_dump((bool) []);f
 // var_dump((bool) '0');f
+
+
+// echo = 10;
+echo $a = 10 . '<br>';
+// echo $10;
+// echo 1 0;
+// echo １０;
+echo 1.0 . '<br>';
+echo 1,0 . '<br>';
+echo '1'.'0'. '<br>';
+echo 1 + '0'. '<br>';
+echo '11' - '1'. '<br>';
+echo (10). '<br>';
+// echo {$a = 10};
+$a = 10; echo '$a'. '<br>';
+$a = 10; echo     ($a). '<br>';

@@ -15,8 +15,8 @@ $itemName = $goodsList[$id];
 </head>
 <body>
     
+    <p><?=$itemName?>が選択されました</p>
+    
+    <p><a href="lists.php">一覧ページに戻る</a></p>
 </body>
 </html>
-<p><?=$itemName?>が選択されました</p>
-
-<p><a href="lists.php">一覧ページに戻る</a></p>

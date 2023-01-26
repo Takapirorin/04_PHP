@@ -32,7 +32,7 @@ $plusNum = $month +1;
 <body>
     <h1>誕生石</h1>
     <form action="" method="post" novalidate>
-        <p><?= $plusNum ?>月の誕生石は<?= $stoneName ?>です</p>
+        <p><?= $plusNum ?>月の誕生石は<?= $stoneName ?>です！</p>
         <p></p>誕生月を選んでください：
             <select name="month" >
             <option value="0">1月</option>

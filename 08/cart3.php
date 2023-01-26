@@ -2,9 +2,9 @@
 $goods = [['name' => '和風柄レターセット', 'price' => 980],['name' => '毛筆ペン(細字) ', 'price' => 240]];
 $count1 = $_POST['count1'];
 $count2 = $_POST['count2'];
-$subtotal1 = $goods1['price'] * $count1;
-$subtotal2 = $goods2['price'] * $count2;
-$total = $subtotal1 + $subtotal2;
+$subTotal1 = $goods[0]['price'] * $count1;
+$subTotal2 = $goods[1]['price'] * $count2;
+$total = $subTotal1 + $subTotal2;
 
 ?>
 
@@ -49,13 +49,13 @@ $total = $subtotal1 + $subtotal2;
             <td><?=$goods[0]["name"]?></td>
             <td><?=$goods[0]["price"]?></td>
             <td><input type="text" name="count1" value="<?=$count1?>" size="2" maxlength="2"></td>
-            <td><?=$subtotal1?>円</td>
+            <td><?=$subTotal1?>円</td>
             </tr>
             <tr>
             <td><?=$goods[1]["name"]?></td>
             <td><?=$goods[1]["price"]?></td>
             <td><input type="text" name="count2" value="<?=$count2?>" size="2" maxlength="2"></td>
-            <td><?=$subtotal2?>円</td>
+            <td><?=$subTotal2?>円</td>
             </tr>
             <tr>
                 <th colspan="3">合計</th>

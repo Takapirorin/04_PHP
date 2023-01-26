@@ -1,19 +1,19 @@
 <?php
-$month = $_POST['month'];
 $birthStones = [
-            'ガーネット',
-            'アメジスト',
-            'アクアマリン',
-            'ダイヤモンド',
-            'エメラルド',
-            'パール',
-            'ルビー',
-            'ペリドット',
-            'サファイア',
-            'オパール',
-            'トパーズ',
-            'ターコイズ'
-    ];
+    'ガーネット',
+    'アメジスト',
+    'アクアマリン',
+    'ダイヤモンド',
+    'エメラルド',
+    'パール',
+    'ルビー',
+    'ペリドット',
+    'サファイア',
+    'オパール',
+    'トパーズ',
+    'ターコイズ'
+];
+$month = $_POST['month'];
 $stoneName = $birthStones[$month -1];
 
 ?>
@@ -31,7 +31,7 @@ $stoneName = $birthStones[$month -1];
     <h1>誕生石</h1>
     <form action="" method="post" novalidate>
         <p><?= $month ?>月の誕生石は<?= $stoneName ?>です</p>
-        <span>誕生月を選んでください：</span>
+        <p></p>誕生月を選んでください：
             <select name="month" >
             <option value="1">1月</option>
             <option value="2">2月</option>
@@ -46,7 +46,7 @@ $stoneName = $birthStones[$month -1];
             <option value="11">11月</option>
             <option value="12">12月</option>
         </select>
-        <span><input type="submit" value="送信"></span>
+        <input type="submit" value="送信"><p>
     </form>
 </body>
 

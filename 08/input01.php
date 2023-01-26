@@ -10,9 +10,9 @@
 
 <body>
     <form action="input02.php" method="post" novalidate>
-        <!-- 隠しフォーム --><input name="id" value="1234">
+        <!-- 隠しフォーム --><input type="hidden" name="id" value="1234">
         <p>ユーザ名：<input type="text" name="user"></p>
-        <p>パスワード：<input type="text" name="pass"></p>
+        <p>パスワード：<input type="password" name="pass"></p>
         <p>性別：
         <input type="radio" name="gender" value="男性" checked>男性
         <input type="radio" name="gender" value="女性" >女性

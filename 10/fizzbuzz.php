@@ -2,13 +2,13 @@
 
 for ($i = 1; $i <= 100 ; $i++){
     if( $i % 5 == 0 && $i % 3) {
-        $x = $i .':FizzBuzz';
+        echo $i .':FizzBuzz';
     } elseif( $i % 5 == 0) {
-        $x = $i .':Fizz';
+        echo $i .':Fizz';
     } elseif( $i % 3 == 0) {
-        $x = $i .':Buzz';
+        echo $i .':Buzz';
     } else {
-        $x = $i;
+        echo $i;
     }
-    echo $x .'<br>';
+    echo '<br>';
 }

@@ -2,7 +2,6 @@
 
 class Member
 {
-
     private $name;
     private $age;
     private $address;
@@ -19,7 +18,9 @@ class Member
         $this->name = $name;
         $this->age = $age;
         $this->address = $address;
-        
+    }
+    public  function  showinfo()
+    {
         echo '<ul>';
         echo '<li>名前:' . $this->name . '</li>';
         echo '<li>年齢:' . $this->age . '</li>';

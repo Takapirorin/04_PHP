@@ -57,7 +57,7 @@ class Member
 // $m1->showInfo();
 // $m2->showInfo();
 
-$m3 = new Member();
+// $m3 = new Member();
 $m3->setName('高橋三郎');
 $m3->setAge('32');
 $m3->setAddress('神奈川県');

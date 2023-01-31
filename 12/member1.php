@@ -16,12 +16,12 @@ class Member
     }
 }
 
-$m1 = new Member();
+// $m1 = new Member();
 $m1->name = '山田太郎';
 $m1->age = 21;
 $m1->address = '東京都';
 
-$m2 = new Member();
+// $m2 = new Member();
 $m2->name = '鈴木次郎';
 $m2->age = 34;
 $m2->address = '大阪府';

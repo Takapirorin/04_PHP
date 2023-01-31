@@ -1,16 +1,28 @@
 <?php
+
+declare(strict_types=1);
+require_once(dirname(__FILE__) . '/Chart.php');
+
 $spring = '';
 $summer = '';
-$fall = '';
+$fall   = '';
 $winter = '';
 
 if (!empty($_POST)) {
     $spring = $_POST['spring'];
     $summer = $_POST['summer'];
-    $fall = $_POST['fall'];
+    $fall   = $_POST['fall'];
     $winter = $_POST['winter'];
+    $data = [$spring, $summer, $fall, $winter];
+    $label = ['春', '夏', '秋', '冬'];
+    $c = new Chart();
+    $c->setTitle('好きな季節 アンケート結果');
+    $c->addData($data, 'population');
+    $c->setXLabel($label);
+    $c->setXAxisName('季節');
+    $c->setYAxisName('（人）');
+    $c->setSize(300, 200);
 }
-
 /**
  * XSS対策の参照名省略
  *
@@ -24,19 +36,7 @@ function h(?string $string): ?string
     return htmlspecialchars($string, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 }
 
-require_once(dirname(__FILE__) . '/Chart.php');
-$data = [$spring, $summer, $fall, $winter];
-$label = ['春', '夏', '秋', '冬'];
-$c = new Chart();
-$c->setTitle('好きな季節 アンケート結果');
-$c->addData($data, 'population');
-$c->setXLabel($label);
-$c->setXAxisName('季節');
-$c->setYAxisName('（人）');
-$c->setSize(300, 200);
 ?>
-
-
 <!DOCTYPE html>
 <html lang="ja">
 

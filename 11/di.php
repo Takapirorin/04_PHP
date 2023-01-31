@@ -18,12 +18,20 @@ $h = 70;   // 湿度 H
  * @param [type] $h
  * @return void
  */
-function getDi(?int $t, ?int $h): ?float
+function getDi(mixed $t = null, mixed $h): ?array
 {   
-    if (empty($t) || empty ($h)) return null;
-    return 0.81 * $t + 0.01 * $h * (0.99 * $t - 14.3) + 46.3;
+    if (is_null($t) || empty ($h)) return null;
+
+    $diArr['di'] = 0.81 * $t + 0.01 * $h * (0.99 * $t - 14.3) + 46.3;
+    if ($diArr['di'] > 55) {
+        $diArr['result'] = '寒い';
+        }
+        elseif ($diArr['di'] < 55) {
+        $diArr['result'] = '寒い';
+        }
+        
 }
 
 ?>
 
-気温 <?=$t?>℃、湿度<?=$h?>%の時の不快指数は<?=getDi($t,$h)?>です。
+気温 <?=$t?>℃、湿度<?=$h?>%の時の不快指数は<?=getDi($t,$h)['di']?>で<?=getDi($t,$h)['result']?>です。

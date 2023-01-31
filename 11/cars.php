@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 require_once(dirname(__FILE__) . '/util.inc.php');
 
 $cars = [
@@ -37,7 +38,6 @@ $cars = [
         'price' => 12500000
     ]
 ];
-
 ?>
 
 <!DOCTYPE html>
@@ -88,7 +88,7 @@ $cars = [
         <tr>
             <td><?=$car['maker']?></td>
             <td><?=$car['model']?></td>
-            <td><?=$car['year']. '年' . '(' .getWareki($car['year']) . ')'?></td>
+            <td><?=$car['year'] . '年(' .getWareki($car['year']) . ')'?></td>
             <td><?=number_format($car['price'])?>円</td>
         </tr>
         <?php endforeach ; ?>

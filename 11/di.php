@@ -11,9 +11,16 @@ $h = 70;   // 湿度 H
 // としたときの不快指数計算式
 
 
-
-function getDi($t,$h)
-{
+/**
+ * 温度と湿度を指定すると不快指数の数値を返す
+ *
+ * @param [type] $t
+ * @param [type] $h
+ * @return void
+ */
+function getDi(?int $t, ?int $h): ?float
+{   
+    if (empty($t) || empty ($h)) return null;
     return 0.81 * $t + 0.01 * $h * (0.99 * $t - 14.3) + 46.3;
 }
 

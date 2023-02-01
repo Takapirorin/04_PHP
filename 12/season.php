@@ -68,7 +68,7 @@ function h(?string $string): ?string
                 <td><input type="text" name="winter" value="<?= h($winter) ?>" size="4">人</td>
             </tr>
         </table>
-        <p><input type="submit" value="グラフ作成"></p>
+        <p><input type="submit" value="グラフ生成"></p>
         <?php if ($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
             <p><?php $c->printBarChart(); ?></p>
         <?php endif; ?>

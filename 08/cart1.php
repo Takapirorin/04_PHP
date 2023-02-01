@@ -1,8 +1,13 @@
 <?php
+$count = '';
+$totalPrice = '';
+
 $goods['name']  = '和風柄レターセット';
 $goods['price'] = 980;
-$count = $_POST['count'];
-$totalPrice = $goods['price'] * $count
+if (!empty($_POST)) {
+    $count = $_POST['count'];
+    $totalPrice = number_format($goods['price'] * $count);
+}
 
 ?>
 
@@ -43,11 +48,12 @@ $totalPrice = $goods['price'] * $count
                 <th>数量</th>
                 <th>小計</th>
             </tr>
-            <td><?=$goods["name"]?></td>
-            <td><?=$goods["price"]?></td>
-            <td><input type="text" name="count" value="<?=$count?>" size="2" maxlength="2"></td>
-            <td><?=$totalPrice?>円</td>
-            
+            <tr>
+                <td><?= $goods["name"] ?></td>
+                <td><?= $goods["price"] ?></td>
+                <td><input type="text" name="count" value="<?= $count ?>" size="2" maxlength="2"></td>
+                <td><?= $totalPrice ?>円</td>
+            </tr>
         </table>
         <p><input type="submit" value="更新"></p>
     </form>

@@ -1,14 +1,16 @@
 <?php
-
 $name = '';
 $kana = '';
 $phone = '';
-$isValidated = true;
+$isValidated = false;
+
 
 if (!empty($_POST)) {
     $name  = $_POST['name'];
     $kana  = $_POST['kana'];
     $phone = $_POST['phone'];
+    $isValidated = true;
+
     if ($name === '' || preg_match('/^(\s|　)+$/u', $name)) {
         $nameError = '氏名を入力してください';
         $isValidated = false;

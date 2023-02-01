@@ -1,7 +1,7 @@
 <?php
 $weekday = ['日', '月', '火','水', '木', '金', '土' ];
-$d1 = (new DateTime('2023-02-01'))->modify('last day of February 2025');
-$d2 = (new DateTime('2023-02-01'))->modify('+10 days');
+$d1 = (new DateTime('last day of February 2025'));
+$d2 = (new DateTime('+10 days'));
 $w1 = $weekday[$d1->format('w')];
 $w2 = $weekday[$d2->format('w')];
 $interval = $d1->diff($d2);

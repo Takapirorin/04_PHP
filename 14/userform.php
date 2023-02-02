@@ -6,10 +6,11 @@ $isValidated = false;
 
 
 if (!empty($_POST)) {
+
+    $isValidated = true;
     $name  = $_POST['name'];
     $kana  = $_POST['kana'];
     $phone = $_POST['phone'];
-    $isValidated = true;
 
     if ($name === '' || preg_match('/^(\s|　)+$/u', $name)) {
         $nameError = '氏名を入力してください';
@@ -18,7 +19,7 @@ if (!empty($_POST)) {
     if ($kana === '' ) {
         $kanaError = 'フリガナを入力してください';
         $isValidated = false;
-    }   elseif (!preg_match('/^[ァ-ヶ\ー]+$/u', $kana)) {
+    }   elseif (!preg_match('/^[ァ-ヶー]+$/u', $kana)) {
         $kanaError = 'フリガナの形式が正しくありません';
         $isValidated = false;
         }

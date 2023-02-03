@@ -3,7 +3,7 @@
 $greeting = 'おはよう';
 echo $greeting . '<br>';
 
-$greeti ng = 'こんにちは';
+$greeting = 'こんにちは';
 echo $greeting . '<br>';
 
 const DAYS_IN_WEEK = 7;

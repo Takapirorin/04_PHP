@@ -1,8 +1,10 @@
 <?php
 session_start();
 
-if ($_POST['user'] === 'taro' and
-    $_POST['pass'] === 'abcd') {
+if (
+    $_POST['user'] === 'taro' and
+    $_POST['pass'] === 'abcd'
+) {
     $_SESSION['authenticated'] = true;
 }
 
@@ -14,15 +16,16 @@ if (!empty($_SESSION) && $_SESSION['authenticated'] == true) {
 $user = '';
 $pass = '';
 if (!empty($_POST)) {
+    $isValidated = true;
     $user = $_POST['user'];
-    $pass = $_POST['pass'];
+    $user = $_POST['pass'];
+
+    if ($user != 'taro' || $pass != 'abcd') {
+        $nameError = 'ユーザIDかパスワードが正しくありません';
+        $isValidated = false;
+    }
 }
 
-$isValidated = true;
-if ($user === 'taro' || $pass === 'abcd') {
-    $nameError = 'ユーザIDかパスワードが正しくありません';
-    $isValidated = false;
-}
 
 /**
  * XSS対策の参照名省略

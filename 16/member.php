@@ -5,13 +5,13 @@ if ($_SESSION['authenticated'] != true) {
     header('Location: login.php');
     exit;
 }
+$user = '';
+$pass = '';
 
 $user = $_SESSION['user'];
 $pass = $_SESSION['pass'];
 $_SESSION['user'] = 'taro';
 $_SESSION['pass'] = 'abcd';
-
-
 
 ?>
 

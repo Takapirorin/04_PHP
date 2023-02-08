@@ -1,6 +1,11 @@
 <?php
 require_once(dirname(__FILE__) . '/env.php');
 
+/**
+ * PDOインスタンスを返すDB接続
+ *
+ * @return object
+ */
 function dbConnect(): object
 {
     return new PDO(

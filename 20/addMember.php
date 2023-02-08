@@ -35,7 +35,7 @@ if (!empty($_POST)) {
             'INSERT INTO members (name, age, address, created_at) VALUES (:name, :age, :address, NOW())'
         );
         $stmt->bindValue(':name', $name, PDO::PARAM_STR);
-        $stmt->bindValue(':age', (int)$age, PDO::PARAM_INT);
+        $stmt->bindValue(':age', $age, PDO::PARAM_INT);
         $stmt->bindValue(':address', $address, PDO::PARAM_STR);
         $stmt->execute();
     } catch (PDOException $e) {
